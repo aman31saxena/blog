@@ -1,7 +1,7 @@
-{% extends 'blog\base.html' %}
+{% extends 'blog/base.html' %}
 
 {% block content %}
-  <h2>Login</h2>
+  <h2></h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -9,5 +9,6 @@
   </form>
    <br>
   <p><strong>-- OR --</strong></p>
+  <br>
   <a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
 {% endblock %}
